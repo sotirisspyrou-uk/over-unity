@@ -1,0 +1,23 @@
+// ==========================================
+// 7. PACKAGE.JSON SCRIPTS CONFIGURATION
+
+export const packageJsonScripts = {
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:e2e": "playwright test",
+    "db:migrate": "supabase db push",
+    "db:reset": "supabase db reset",
+    "db:seed": "tsx scripts/seed-database.ts",
+    "setup": "tsx scripts/setup-database.ts",
+    "deploy:staging": "tsx scripts/deploy.ts --env staging",
+    "deploy:prod": "tsx scripts/deploy.ts --env production",
+    "analyze": "cross-env ANALYZE=true next build",
+    "postinstall": "husky install"
+  }
+};
